@@ -1,0 +1,7 @@
+# project stuff
+database.db
+
+# Environments
+.env
+.venv
+env/
