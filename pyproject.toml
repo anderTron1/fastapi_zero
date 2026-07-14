@@ -11,7 +11,10 @@ dependencies = [
     "fastapi[standard] (>=0.139.0,<0.140.0)",
     "sqlalchemy (>=2.0.51,<3.0.0)",
     "pydantic-settings (>=2.14.2,<3.0.0)",
-    "alembic (>=1.18.5,<2.0.0)"
+    "alembic (>=1.18.5,<2.0.0)",
+    "pwdlib[argon2] (>=0.3.0,<0.4.0)",
+    "pyjwt (>=2.13.0,<3.0.0)",
+    "tzdata (>=2026.3,<2027.0)"
 ]
 
 
@@ -33,7 +36,7 @@ extend-exclude = ['migrations']
 
 [tool.ruff.lint]
 preview = true 
-select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+select = ['I', 'F', 'E', 'W', 'PL', 'PT', 'FAST']
 
 [tool.ruff.format]
 preview = true 
