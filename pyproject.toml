@@ -15,7 +15,8 @@ dependencies = [
     "pwdlib[argon2] (>=0.3.0,<0.4.0)",
     "pyjwt (>=2.13.0,<3.0.0)",
     "tzdata (>=2026.3,<2027.0)",
-    "aiosqlite (>=0.22.1,<0.23.0)"
+    "aiosqlite (>=0.22.1,<0.23.0)",
+    "psycopg[binary] (>=3.3.4,<4.0.0)"
 ]
 
 
@@ -31,7 +32,8 @@ dev = [
     "taskipy (>=1.14, <2.0.0)",
     "pytest-asyncio (>=1.4.0,<2.0.0)",
     "factory-boy (>=3.3.3,<4.0.0)",
-    "freezegun (>=1.5.5,<2.0.0)"
+    "freezegun (>=1.5.5,<2.0.0)",
+    "testcontainers (>=4.14.2,<5.0.0)"
 ]
 
 [tool.ruff]
@@ -49,7 +51,8 @@ quote-style = 'single'
 [tool.pytest.ini_options]
 pythonpath = "."
 addopts = '-p no:warnings'
-asyncio_default_fixture_loop_scope = 'function'
+asyncio_default_fixture_loop_scope = 'session'
+asyncio_default_test_loop_scope = "session"
 
 [tool.taskipy.tasks]
 lint      ='ruff check'
