@@ -6,7 +6,10 @@ jobs:
     runs-on: ubuntu-latest
   
   steps:
+    - name: Checkout do código
+      uses: actions/checkout@v4
+
     - name: Instalar o python
-      users: actions/setup-python@v5
+      uses: actions/setup-python@v5
       with: 
         python-version: '3.13'
